@@ -16,7 +16,7 @@ spec:
       project: default
       source:
         repoURL: https://github.com/arunvthangaraj/app-gitops.git
-        path: argo-app
+        path: app-manifest
         targetRevision: main
       destination:
         server: '{{server}}'
