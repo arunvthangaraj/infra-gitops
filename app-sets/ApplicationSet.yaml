@@ -5,7 +5,9 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  - clusters: {}
+  - list:
+      elements:
+      - cluster: in-cluster
   template:
     metadata:
       name: '{{name}}-my-app'
