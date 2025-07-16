@@ -13,7 +13,7 @@ spec:
           values: [in-cluster]
   template:
     metadata:
-      name: '{{cluster}}-my-app'
+      name: '{{name}}-my-app'
     spec:
       project: default
       source:
