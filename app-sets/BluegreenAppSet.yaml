@@ -16,7 +16,7 @@ spec:
       project: default
       source:
         repoURL: https://github.com/arunvthangaraj/app-gitops.git
-        path: app-manifest
+        path: app-manifest/blue-green
         targetRevision: main
       destination:
         server: '{{server}}'
