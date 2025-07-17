@@ -20,4 +20,10 @@ spec:
         targetRevision: main
       destination:
         server: '{{server}}'
-        namespace: default
+        namespace: rollout-demo-ns
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+        - CreateNamespace=true
