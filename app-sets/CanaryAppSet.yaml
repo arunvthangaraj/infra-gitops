@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: my-appset
+  namespace: argocd
+spec:
+  generators:
+  - clusters:
+      selector:
+        matchLabels:
+          spoke: "true"
+  template:
+    metadata:
+      name: '{{name}}-my-canary-app'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/arunvthangaraj/app-gitops.git
+        path: app-manifest/canary
+        targetRevision: main
+      destination:
+        server: '{{server}}'
+        namespace: default
