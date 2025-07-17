@@ -11,7 +11,7 @@ spec:
           spoke: "true"
   template:
     metadata:
-      name: '{{name}}-my-app'
+      name: '{{name}}-my-bluegreen-app'
     spec:
       project: default
       source:
